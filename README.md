@@ -1,6 +1,6 @@
 <div align="center">
   <img
-    src="./site/assets/logo.svg"
+    src="./site/assets/favicon.svg"
     alt="WTransport Logo"
     width="100"
   />
