@@ -12,7 +12,7 @@ The geometric composition of the mascot encodes specific WebTransport protocol f
 
 - **Tripartite Stripes**: Denote the multiplexing of independent, ordered byte streams over a unified connection space.
 - **Ocular Dots**: Represent the capability for discrete, unreliable datagram transmission.
-- **Paired Wings**: Abstract the bidirectional flow of asynchronous stream I/O.
+- **Paired Wings**: Abstract the bidirectional flow of asynchronous stream I/O via embedded counter-directional arrows.
 - **Terminal Stinger**: Signifies the abrupt execution of state teardown and abortive termination primitives.
 
 ## Color Taxonomy and Implementation Mapping
