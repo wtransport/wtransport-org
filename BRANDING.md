@@ -29,7 +29,7 @@ The visual assets use a dichotomy of stroke-based and solid-fill designs to dist
 - **Palette**: Amber (Hex: `#FFC107`)
 - **Semantics**: Represents the async-native WebTransport stack for Python. The solid chromatic fill denotes a concrete implementation, providing a visual alignment with the broader Python ecosystem.
 
-### WTransport-RS
+### WebTransport-RS
 
 - **Palette**: Deep Rust (Hex: `#BF360C`)
 - **Semantics**: Represents the async-native WebTransport stack for Rust. The solid chromatic fill denotes a concrete implementation, providing a visual alignment with the broader Rust ecosystem.
