@@ -1,0 +1,14 @@
+# Environment
+.env
+.env.*
+
+# IDE
+.idea/
+.vscode/*
+!.vscode/settings.json
+*.sublime-project
+*.sublime-workspace
+
+# OS
+.DS_Store
+Thumbs.db

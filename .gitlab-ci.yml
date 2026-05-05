@@ -1,0 +1,32 @@
+# WTransport Org CI/CD Pipeline
+
+stages:
+  - deploy
+
+default:
+  tags:
+    - wtransport
+
+deploy-github:
+  stage: deploy
+  image: python:3.12-slim-bookworm
+  variables:
+    GIT_DEPTH: 0
+  cache: []
+  before_script:
+    - apt-get update && apt-get install -y ca-certificates git gnupg
+    - cp "$INTERNAL_CA_CERT" /usr/local/share/ca-certificates/internal_ca.crt
+    - update-ca-certificates
+    - export GPG_TTY=$(tty)
+    - gpg --batch --import "$GPG_PRIVATE_KEY"
+    - "git config user.signingkey $(gpg --list-secret-keys --with-colons | grep
+      \"^sec:\" | cut -d: -f5 | head -n1)"
+    - git config commit.gpgsign true
+  script:
+    - git config user.name "WTransport Bot"
+    - git config user.email "251935624+wtransport-bot@users.noreply.github.com"
+    - git push "https://$GITHUB_TOKEN@github.com/wtransport/wtransport-org.git"
+      $CI_COMMIT_SHA:refs/heads/$CI_COMMIT_BRANCH
+  rules:
+    - if: "$CI_COMMIT_BRANCH == \"main\""
+    - when: never

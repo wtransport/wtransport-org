@@ -1,0 +1,36 @@
+# WTransport Org General Request GitHub Issue Form
+
+name: "General Request"
+description: "Submit a technical inquiry or request."
+labels: [ "triage" ]
+body:
+  - type: "markdown"
+    attributes:
+      value: |
+        Required details for the request.
+
+  - type: "textarea"
+    id: "description"
+    attributes:
+      label: "Description"
+      description: "Technical details and summary of the request."
+    validations:
+      required: true
+
+  - type: "textarea"
+    id: "proposal"
+    attributes:
+      label: "Proposal"
+      description: "Suggested modifications or required actions."
+    validations:
+      required: false
+
+  - type: "checkboxes"
+    id: "checklist"
+    attributes:
+      label: "Checklist"
+      options:
+        - label: "Checked existing issues for duplicates."
+          required: true
+        - label: "Willing to submit a Pull Request."
+          required: false
