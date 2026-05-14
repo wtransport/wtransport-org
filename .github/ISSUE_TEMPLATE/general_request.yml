@@ -2,7 +2,7 @@
 
 name: "General Request"
 description: "Submit a technical inquiry or request."
-labels: [ "triage" ]
+labels: ["triage"]
 body:
   - type: "markdown"
     attributes:
